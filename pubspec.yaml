@@ -7,6 +7,11 @@ environment:
   sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
+flutter:
+  fonts:
+    - family: GoogleFonts
+      fonts:
+        - asset: https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap
   flutter:
     sdk: flutter
   provider: ^6.0.5
