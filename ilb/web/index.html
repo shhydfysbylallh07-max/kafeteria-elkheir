@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="كافتيريا الخير - أفضل العصائر والوجبات الخفيفة في اليمن" name="description">
+    <meta content="كافتيريا, عصائر, وجبات خفيفة, سندوتشات, تعز, اليمن" name="keywords">
+    <meta content="كافتيريا الخير" name="author">
+    
+    <title>كافتيريا الخير 🥤 | التميز في الطعم</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="كافتيريا الخير">
+    <meta property="og:description" content="عصائر طازجة ووجبات خفيفة بسعر مميز">
+    <meta property="og:image" content="https://cdn.pixabay.com/photo/2017/08/03/21/48/drinks-2578446_1280.jpg">
+    <meta property="og:url" content="https://kafeteria-alkhair.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- PWA Manifest -->
+    <link href="manifest.json" rel="manifest">
+    
+    <!-- Favicon -->
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
+    
+    <!-- Apple Touch Icon -->
+    <link href="icons/apple-touch-icon.png" rel="apple-touch-icon">
+    
+    <!-- Styles -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0A7B0A 0%, #4CAF50 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            direction: rtl;
+        }
+        
+        .loading-container {
+            max-width: 600px;
+            width: 100%;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        .logo {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: #FFD700;
+            text-shadow: 3px 3px 0 #075E07;
+            animation: bounce 2s infinite;
+        }
+        
+        .slogan {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 6px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #FFD700;
+            border-radius: 50%;
+            margin: 30px auto;
+            animation: spin 1s linear infinite;
+        }
+        
+        .progress-container {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            height: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: #FFD700;
+            width: 0%;
+            animation: progress 3s ease-in-out infinite;
+        }
+        
+        .info-box {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .contact-icon {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        
+        .install-btn {
+            background: #FFD700;
+            color: #075E07;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .install-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .install-btn:active {
+            transform: translateY(0);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes progress {
+            0% { width: 0%; }
+            50% { width: 70%; }
+            100% { width: 100%; }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .slogan {
+                font-size: 1.2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loading-container">
+        <div class="logo">🥤 كافتيريا الخير 🍔</div>
+        <div class="slogan">التميز في كل قطرة... الروعة في كل لقمة</div>
+        
+        <div class="loading-spinner"></div>
+        
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+        
+        <p style="margin-top: 20px; font-size: 1.1rem;">جاري تحميل أفضل تجربة تسوق...</p>
+        
+        <div class="info-box">
+            <h3 style="margin-bottom: 15px;">📞 للتواصل معنا:</h3>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>تعز - دمنة خدير<br>امام الملك فون</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div>+967 730 528 609</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">⏰</div>
+                    <div>مفتوح 24 ساعة</div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="install-btn" onclick="installPWA()">
+            📲 تثبيت التطبيق
+        </button>
+    </div>
+    
+    <!-- Flutter Web Script -->
+    <script>
+        // PWA Installation
+        let deferredPrompt;
+        const installButton = document.querySelector('.install-btn');
+        
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            installButton.style.display = 'inline-flex';
+        });
+        
+        function installPWA() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('User accepted the install prompt');
+                    }
+                    deferredPrompt = null;
+                });
+            }
+        }
+        
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('flutter_service_worker.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered: ', registration);
+                    })
+                    .catch((error) => {
+                        console.log('Service Worker registration failed: ', error);
+                    });
+            });
+        }
+        
+        // Progressive Enhancement
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const loadingText = document.querySelector('p');
+                if (loadingText) {
+                    loadingText.textContent = 'جاري تهيئة المتجر الإلكتروني...';
+                }
+            }, 2000);
+        });
+    </script>
+    
+    <!-- Flutter Web Entry Point -->
+    <script src="main.dart.js" type="application/javascript"></script>
+</body>
+</html>
